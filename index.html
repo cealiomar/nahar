@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>نهار: مهام وصلاة ومصاريف</title>
+<meta name="description" content="يومك متقسم على مواعيد الصلاة. قول جملة واحدة بالعامية تبقى مهمة ومصروف وتذكير. من غير تسجيل ومن غير إعلانات.">
+<meta property="og:title" content="نهار: مهام وصلاة ومصاريف">
+<meta property="og:description" content="قول جملة واحدة بالعامية تبقى مهمة ومصروف وتذكير.">
+<meta property="og:image" content="img/screen-1.png">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FBFAF7; --sheet: #FFFFFF; --ink: #191B1A; --ink2: #5D615E; --ink3: #6E726F;
+    --nile: #1F6F8B; --nile-soft: #E3F0F4; --sun: #F9F3E0; --line: #E9E7E1; --ok: #2F6B3E;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #0F1110; --sheet: #181B19; --ink: #EDEFED; --ink2: #A3A8A5; --ink3: #848986;
+            --nile: #6DB2CB; --nile-soft: #16323D; --sun: #1C1A14; --line: #2D312F; --ok: #80C390; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+         font-family: "IBM Plex Sans Arabic", system-ui, sans-serif; line-height: 1.7; }
+  a { color: var(--nile); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 22px; text-decoration: none; color: var(--ink); }
+  .brand img { width: 40px; height: 40px; border-radius: 12px; }
+  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; padding: 40px 0 56px; }
+  .hero h1 { font-size: clamp(34px, 5vw, 54px); line-height: 1.25; margin: 0 0 16px; }
+  .hero p { font-size: 19px; color: var(--ink2); margin: 0 0 28px; }
+  .quote { background: var(--sheet); border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px;
+           font-size: 17px; margin-bottom: 28px; }
+  .quote b { color: var(--nile); }
+  .cta { display: inline-flex; align-items: center; gap: 10px; background: var(--nile); color: #fff; text-decoration: none;
+         padding: 14px 26px; border-radius: 16px; font-weight: 700; font-size: 17px; }
+  .cta small { display: block; font-weight: 400; opacity: .85; font-size: 12px; }
+  .note { color: var(--ink3); font-size: 14px; margin-top: 12px; }
+  .phone { justify-self: center; width: min(320px, 80vw); border-radius: 36px; overflow: hidden;
+           box-shadow: 0 30px 60px -20px rgba(0,0,0,.35); border: 8px solid #111; background: #111; }
+  .phone img { display: block; width: 100%; }
+  section { padding: 48px 0; }
+  h2 { font-size: 30px; margin: 0 0 24px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card { background: var(--sheet); border: 1px solid var(--line); border-radius: 20px; padding: 22px; }
+  .card .ic { font-size: 28px; }
+  .card h3 { margin: 8px 0 6px; font-size: 19px; }
+  .card p { margin: 0; color: var(--ink2); }
+  .ramadan { background: linear-gradient(135deg, var(--nile-soft), var(--sheet)); border-radius: 28px; padding: 32px; }
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .plan { background: var(--sheet); border: 1px solid var(--line); border-radius: 20px; padding: 22px; }
+  .plan.best { border: 2px solid var(--nile); }
+  .plan .price { font-size: 30px; font-weight: 700; }
+  .plan .per { color: var(--ink2); }
+  .tag { display: inline-block; background: var(--nile-soft); color: var(--nile); border-radius: 99px; padding: 2px 10px; font-size: 13px; font-weight: 600; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--ink3); font-size: 14px; display: flex; gap: 18px; flex-wrap: wrap; }
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; padding-top: 16px; }
+    .grid, .plans { grid-template-columns: 1fr; }
+    .ramadan { padding: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="./"><img src="img/icon.png" alt="">نهار</a>
+    <a href="privacy.html">الخصوصية</a>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>يومك متقسم على الصلاة، ومتنظّم بصوتك.</h1>
+      <p>قول جملة واحدة بالعامية، و«نهار» يحوّلها لمهمة بتذكير ومصروف متسجّل. من غير تسجيل، ومن غير إعلانات.</p>
+      <div class="quote">🎙️ «فكرني <b>أكلم أحمد بكرة الساعة ٥</b>، ودفعت <b>١٥٠ جنيه بنزين</b>»</div>
+      <!-- Replace with the live Play link once published -->
+      <a class="cta" href="https://play.google.com/store/apps/details?id=app.nahar">
+        <span>نزّله من Google Play<small>ببلاش</small></span>
+      </a>
+      <div class="note">لأندرويد. عربي وإنجليزي، ووضع ليلي.</div>
+    </div>
+    <div class="phone"><img src="img/screen-1.png" alt="شاشة النهاردة في تطبيق نهار"></div>
+  </div>
+
+  <section>
+    <h2>كل يومك في مكان واحد</h2>
+    <div class="grid">
+      <div class="card"><div class="ic">🕌</div><h3>على مواعيد الصلاة</h3><p>بعد الفجر، بعد الضهر، بعد العصر… بمواعيد مدينتك. تنبيه قبل الصلاة، وأذان لو حابب.</p></div>
+      <div class="card"><div class="ic">✅</div><h3>مهام من غير لخبطة</h3><p>علّم بلمسة، وأجّل بسحبة، وضيف ١٠٠ حاجة مرة واحدة. ومهام بتتكرر لوحدها.</p></div>
+      <div class="card"><div class="ic">💸</div><h3>فلوسك بالجنيه</h3><p>مصروف الشهر وبنوده، وميزانية تقولك تقدر تصرف كام في اليوم.</p></div>
+      <div class="card"><div class="ic">🌱</div><h3>عادات من غير ضغط</h3><p>المية والورد والرياضة. ويوم راحة مبيقطعش السلسلة.</p></div>
+      <div class="card"><div class="ic">📱</div><h3>ويدجت بتعمل حاجة</h3><p>عدّاد للصلاة الجاية، وتعلّم على مهامك من الشاشة الرئيسية.</p></div>
+      <div class="card"><div class="ic">🔒</div><h3>بياناتك على موبايلك</h3><p>مفيش حساب ولا سيرفرات ولا إعلانات. كل حاجة متخزنة عندك.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="ramadan">
+      <h2>🌙 جاهز لرمضان</h2>
+      <p>عدّ تنازلي للفطار والإمساك، وإمساكية الشهر كله، وتنبيه السحور، وختمة رمضان جزء كل يوم.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>نهار بلس <span class="tag">اختياري</span></h2>
+    <p style="color:var(--ink2);margin-top:-10px">كل اللي ببلاش هيفضل ببلاش. بلس للي عايز أكتر: عادات وطلاب من غير حد، وتصدير لإكسل، وتقرير كل شهر PDF.</p>
+    <div class="plans">
+      <div class="plan best"><span class="tag">الأوفر</span><div class="price">٣٩٩ ج</div><div class="per">في السنة · أول أسبوع ببلاش</div></div>
+      <div class="plan"><div class="price">٤٩ ج</div><div class="per">في الشهر · أول أسبوع ببلاش</div></div>
+      <div class="plan"><div class="price">٩٩٩ ج</div><div class="per">مرة واحدة · لأول ٥٠ مؤسس</div></div>
+    </div>
+    <p class="note">الدفع عن طريق Google Play، وتقدر تلغي في أي وقت.</p>
+  </section>
+
+  <footer>
+    <span>© ٢٠٢٦ نهار</span>
+    <a href="privacy.html">سياسة الخصوصية</a>
+    <a href="terms.html">شروط الاستخدام</a>
+    <!-- Replace with your contact email -->
+    <a href="mailto:cealiomar.work@gmail.com">تواصل معانا</a>
+  </footer>
+</div>
+</body>
+</html>
